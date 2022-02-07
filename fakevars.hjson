@@ -1,0 +1,35 @@
+[
+  { 
+    type: 'fakevars',
+    module : 'fakevars',
+    action : 'assign',
+    groupTitle : 'Fakevars',
+    groupIcon : 'fad fa-lg fa-equals comp-flows',
+    title : 'Fakevars - @@var(name)@@',
+    icon : 'fad fa-lg fa-equals comp-flows',
+    properties : [
+        {
+        group: 'Info',
+        variables: [
+            { name: 'info_Text', type: 'static', help: '🧪 EXPERIMENTAL</br>ℹ️ This action will only run if your NODE_ENV is set to development</br>☢️ Do not store sensitive data and then leave the code publicly available.'}     
+        ]},
+        {
+        group: 'Variables',
+        variables: [
+            { name: 'get', optionName: 'getvars', key: 'var', keyValue: 'value', title: 'GET', type: 'grid', defaultValue: {}, serverDataBindings: true,
+                columns: [
+                    { field: 'var', caption: 'Name', size: '30%', editable: {type: 'text'}},
+                    { field: 'value', caption: 'Value', size: '70%', editable: {type: 'datapicker'}}]},
+            { name: 'post', optionName: 'postvars', key: 'var', keyValue: 'value', title: 'POST', type: 'grid', defaultValue: {}, serverDataBindings: true,
+                columns: [
+                    { field: 'var', caption: 'Name', size: '30%', editable: {type: 'text'}},
+                    { field: 'value', caption: 'Value', size: '70%', editable: {type: 'datapicker'}}]},
+        ]},
+      {
+        group: 'Output',
+        variables: [
+          { name: 'output', optionName: 'output', title: 'Output', initValue: false, defaultValue: false, type: 'boolean'}       
+        ]}
+    ]
+  }
+]
