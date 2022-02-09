@@ -24,6 +24,10 @@
                 columns: [
                     { field: 'var', caption: 'Name', size: '30%', editable: {type: 'text'}},
                     { field: 'value', caption: 'Value', size: '70%', editable: {type: 'datapicker'}}]},
+            { name: 'param', optionName: 'paramvars', key: 'var', keyValue: 'value', title: 'PARAM', type: 'grid', defaultValue: {}, serverDataBindings: true,
+                columns: [
+                    { field: 'var', caption: 'Name', size: '30%', editable: {type: 'text'}},
+                    { field: 'value', caption: 'Value', size: '70%', editable: {type: 'datapicker'}}]}
         ]},
       {
         group: 'Output',
